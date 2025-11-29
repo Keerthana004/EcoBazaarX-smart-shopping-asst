@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>EcoBasaarX — Sign In</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="signin-card">
+
+    <header class="brand">
+      <div class="eco-logo">Eco<span>Basaar</span>X</div>
+    </header>
+
+    <h2 class="title">Sign in</h2>
+
+    <form id="signinForm" novalidate>
+
+      <label class="field">
+        <span class="label-text">Enter mobile number or email</span>
+        <input id="signinInput" type="text" placeholder="Mobile number or email" required>
+      </label>
+
+      <button type="submit" class="btn primary">Continue</button>
+
+      <p class="small-note">
+        By continuing, you agree to EcoBasaarX’s
+        <a href="#" style="color:var(--blue); text-decoration:none;">Terms</a> &amp;
+        <a href="#" style="color:var(--blue); text-decoration:none;">Privacy Policy</a>.
+      </p>
+
+      <a href="#" class="help-link" style="color:var(--blue); text-decoration:none; display:block; margin-top:6px;">Need help?</a>
+
+      <div class="divider">
+        <span>New here?</span>
+      </div>
+
+      <button type="button" id="createAccount" class="btn ghost" style="width:100%;">Create your EcoBasaarX account</button>
+
+    </form>
+
+  </main>
+
+  <script src="auth.js"></script>
+</body>
+</html>

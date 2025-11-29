@@ -1,0 +1,152 @@
+:root {
+  --bg: #e9f2ef;
+  --card: #ffffff;
+  --blue: #1a73e8;
+  --green-metal: #1dbf73;
+  --text-muted: #6b7370;
+  --shadow: 0 12px 30px rgba(0,0,0,0.08);
+  --radius: 12px;
+  --max-width: 920px;
+  --gap: 16px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: "Nunito", Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #0d2418;
+  -webkit-font-smoothing: antialiased;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.card {
+  width: calc(100% - 48px);
+  max-width: var(--max-width);
+  margin: 18px auto;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 22px;
+  border: 1px solid #e6efe8;
+}
+
+/* branding header */
+.brand { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+.logo { height:34px; }
+
+/* headings */
+h1, h2 { margin: 6px 0 8px; font-size:20px; }
+.lead { margin: 0 0 18px; color: var(--text-muted); font-size:13px; }
+
+/* SIGNIN CARD */
+.signin-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  padding: 28px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #dfebe8;
+}
+
+/* Form layout for register */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: start;
+}
+
+.form-col { display:flex; flex-direction:column; gap:12px; }
+
+.field { display:block; }
+.label-text { display:block; font-size:13px; color: var(--text-muted); margin-bottom:8px; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+  width:100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eee8;
+  background: #fbfefe;
+  font-size:14px;
+  outline:none;
+}
+input:focus, select:focus { box-shadow: 0 0 0 3px rgba(26,115,232,0.12); border-color: var(--blue); }
+
+/* Mobile + verify row */
+.mobile-row { display:flex; gap:8px; align-items:center; }
+.country { width:110px; padding:9px; border-radius:8px; border:1px solid #e6eee8; background:#fff; }
+.mobile-input { flex:1; }
+
+/* OTP area */
+.otp-area { margin-top:10px; display:flex; gap:8px; align-items:center; }
+.otp-area input { width:120px; padding:8px 10px; }
+
+/* password helper row */
+.pw-row { display:flex; justify-content:space-between; align-items:center; margin-top:8px; font-size:13px; color: var(--text-muted); }
+.show { display:flex; gap:6px; align-items:center; }
+
+/* Buttons */
+.actions { margin-top:18px; display:flex; gap:10px; align-items:center; }
+.btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 10px;
+  touch-action: pinch-zoom;
+}
+.btn.primary { color: white; background:mediumturquoise ; box-shadow: 0 6px 16px rgba(27,114,98,0.08); align-content: center; align-items: center; }
+.btn.ghost { background: transparent; border: 1px solid #e6eee8; color: var(--text-muted); }
+.btn.link { background: transparent; border: none; text-decoration: underline; color: var(--text-muted); }
+
+/* small text & error */
+.small-note { margin-top: 12px; color: var(--text-muted); font-size:13px; }
+.error { color: #c23b3b; font-size:13px; margin-top:6px; }
+
+/* centered signin small card helper */
+.center-box { max-width:420px; margin:0 auto; padding:10px; }
+
+/* Divider */
+.divider {
+  text-align:center;
+  margin:22px 0;
+  font-size:13px;
+  color: var(--text-muted);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.divider::before, .divider::after { content:""; flex:1; height:1px; background:#d8e4e1; }
+
+/* Responsive */
+@media (max-width: 780px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; align-items: stretch; }
+  .brand { justify-content:center; }
+}
+.eco-logo {
+    font-family: 'Nunito', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #1d6b4a; /* deep eco green */
+    display: inline-block;
+    background: linear-gradient(90deg, #1a73e8, #1dbf73);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+}
+.eco-logo span {
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
