@@ -4,47 +4,70 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>EcoBasaarX — Sign In</title>
-  <link rel="stylesheet" href="style.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- centered sign-in area -->
+  <main class="site-main signin-page">
+    <div class="container" style="min-height: calc(100vh - 160px); display:flex; align-items:center;">
+      <div style="margin:auto; width:100%; max-width:420px;">
+        <div class="signin-card" role="main" aria-labelledby="signinTitle">
+          <div class="brand">
+            <div class="eco-logo">Eco<span>Basaar</span>X</div>
+          </div>
 
-  <main class="signin-card">
+          <h2 id="signinTitle">Sign in</h2>
 
-    <header class="brand">
-      <div class="eco-logo">Eco<span>Basaar</span>X</div>
-    </header>
+          <form id="signinForm" novalidate>
+            <label class="field">
+              <span class="label-text">Enter mobile number or email</span>
+              <input id="signinInput" type="text" placeholder="Mobile number or email" required>
+            </label>
 
-    <h2 class="title">Sign in</h2>
+            <div class="actions" style="margin-top:14px;">
+              <button type="submit" class="btn primary">Continue</button>
+            </div>
 
-    <form id="signinForm" novalidate>
+            <p class="small-note" style="margin-top:10px;">
+              By continuing, you agree to EcoBasaarX’s <a href="#" style="color:var(--blue)">Terms</a> &amp;
+              <a href="#" style="color:var(--blue)">Privacy Policy</a>.
+            </p>
 
-      <label class="field">
-        <span class="label-text">Enter mobile number or email</span>
-        <input id="signinInput" type="text" placeholder="Mobile number or email" required>
-      </label>
+            <a class="help-link" href="#" style="color:var(--blue); display:inline-block; margin-top:10px;">Need help?</a>
 
-      <button type="submit" class="btn primary">Continue</button>
+            <div class="divider" style="margin-top:18px"><span>New here?</span></div>
 
-      <p class="small-note">
-        By continuing, you agree to EcoBasaarX’s
-        <a href="#" style="color:var(--blue); text-decoration:none;">Terms</a> &amp;
-        <a href="#" style="color:var(--blue); text-decoration:none;">Privacy Policy</a>.
-      </p>
-
-      <a href="#" class="help-link" style="color:var(--blue); text-decoration:none; display:block; margin-top:6px;">Need help?</a>
-
-      <div class="divider">
-        <span>New here?</span>
+            <div style="margin-top:8px;">
+              <a href="register.html" class="btn ghost" style="width:100%; display:inline-block; text-align:center; padding:12px 14px;">Create your EcoBasaarX account</a>
+            </div>
+          </form>
+        </div>
       </div>
-
-      <button type="button" id="createAccount" class="btn ghost" style="width:100%;">Create your EcoBasaarX account</button>
-
-    </form>
-
+    </div>
   </main>
 
   <script src="auth.js"></script>
+
+  <!-- same helper to set right panel position on this page too -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const root = document.documentElement;
+    const rightPanel = document.querySelector('.right-panel');
+
+    function updateRightPanelPosition(){
+      if (!header || !rightPanel) return;
+      const headerH = header.getBoundingClientRect().height || 64;
+      const top = headerH + 12;
+      root.style.setProperty('--right-panel-top', top + 'px');
+      rightPanel.style.top = top + 'px';
+    }
+    updateRightPanelPosition();
+    window.addEventListener('resize', updateRightPanelPosition);
+  });
+  </script>
 </body>
 </html>
