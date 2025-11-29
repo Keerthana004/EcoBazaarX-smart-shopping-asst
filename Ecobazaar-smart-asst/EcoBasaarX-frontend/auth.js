@@ -1,4 +1,4 @@
-// auth.js used by signin.html and register.html
+// auth.js - shared for signin + register pages
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------------
@@ -13,12 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const val = signinInput.value.trim();
       if (!val) {
-        alert('Enter mobile number or email'); // simple feedback for demo
+        // better UX: show inline message (simple demo)
+        alert('Enter mobile number or email');
         return;
       }
       // TODO: call backend /auth/login with payload { identifier: val }
       console.log('Sign in (demo) with', val);
-      // Example: fetch('/api/auth/login', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({identifier: val})})
+      // Example:
+      // fetch('/api/auth/login', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({identifier: val})})
     });
 
     if (createAccount) createAccount.addEventListener('click', () => location.href = 'register.html');
@@ -122,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entered === '1234') {
         mobileVerified = true;
         mobileStatus.textContent = 'Mobile verified ✓';
-        mobileStatus.style.color = 'var(--green-metal)';
+        mobileStatus.style.color = 'var(--green)';
         otpArea.style.display = 'none';
         verifyBtn.textContent = 'Verified';
         verifyBtn.disabled = true;
@@ -164,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Demo: replace with real backend call to register endpoint
       // fetch('/api/auth/register', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
-      formMsg.style.color = 'var(--green-metal)';
+      formMsg.style.color = 'var(--green)';
       formMsg.textContent = 'Account created (demo). Replace with backend API call.';
       setTimeout(() => { /* location.href = 'signin.html' */ }, 700);
     });
