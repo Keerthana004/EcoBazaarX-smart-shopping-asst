@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Demo output 
       console.log("Sign in demo:", { identifier, password });
+      location.href = "landing.html";
 
       alert("Sign in successful (demo). Replace with backend API call.");
     });
