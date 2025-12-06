@@ -37,37 +37,37 @@
     <!-- Hero -->
     <main class="site-main" id="home">
         <div class="container">
-            <section class="hero">
-                <div class="hero-inner">
-
+            <!-- Hero (new design inspired by example) -->
+            <section id="home" class="hero-advanced">
+                <div class="hero-wrap container">
                     <div class="hero-left">
-                        <h1>Shop smarter. Reduce your carbon footprint.</h1>
-                        <p class="lead">Compare eco-scores, view CO₂ estimates and discover greener alternatives — every
-                            purchase can make a difference.</p>
+                        <div class="eyebrow">Smart · Fast · Sustainable</div>
 
-                        <div class="stat-row" style="display:flex; gap:12px; flex-wrap:wrap;">
-                            <div class="stat"
-                                style="background:#fff;padding:10px 14px;border-radius:10px;border:1px solid #eef7f3; font-weight:700;">
-                                Eco-score (0–100)</div>
-                            <div class="stat"
-                                style="background:#fff;padding:10px 14px;border-radius:10px;border:1px solid #eef7f3; font-weight:700;">
-                                CO₂ per product (kg)</div>
-                            <div class="stat"
-                                style="background:#fff;padding:10px 14px;border-radius:10px;border:1px solid #eef7f3; font-weight:700;">
-                                Saved impact tracking</div>
+                        <h1>
+                            Your Shopping<br />
+                            Under <span class="highlight">Reliable</span> <br />
+                            Eco-Friendly Choices
+                        </h1>
+
+                        <p class="hero-sub">
+                            EcoBazaarX helps you pick products that are best for you — and kinder to the planet.
+                            Fast recommendations, clear impact scores, and a shopping flow that just works.
+                        </p>
+
+                        <div class="hero-ctas">
+                            <a class="btn primary" href="register.html">Get Started for Free</a>
                         </div>
+
                     </div>
 
                     <div class="hero-right" aria-hidden="true">
-                        <div class="hero-visual">
-                            <div style="font-weight:800;color:var(--green);font-size:18px;margin-bottom:8px;">
-                                Eco-Friendly Choices</div>
-                            <div style="color:var(--muted); font-size:14px; max-width:260px; margin:0 auto;">At-a-glance
-                                product comparison, eco-scores and suggested greener alternatives — designed for
-                                shoppers.</div>
+                        <!-- device / illustration — use a transparent PNG or SVG for best look -->
+                        <div class="hero-illu-wrap">
+                            <div class="hero-illu-mask">
+                                <img src="assets/products/heropage.jpg" alt="" class="hero-illu" />
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </section>
 
@@ -83,69 +83,154 @@
             </section>
             <!-- ⭐ END OF ECO PRODUCT SECTION -->
 
-            <!-- Features -->
-            <section id="features" class="how">
-                <h2>Features</h2>
+            <!-- Features: Icon grid (minimal, content-first) -->
+            <section id="features" class="features-grid-section">
+                <div class="container">
+                    <header class="features-head">
+                        <h2>Powerful features, made simple</h2>
+                        <p class="lead">Everything you need to choose better products fast — clear impact data,
+                            personalized suggestions, and a smooth checkout flow.</p>
+                    </header>
 
-                <div class="how-grid">
-                    <div class="how-card">
-                        <h4>Clear Eco-scores</h4>
-                        <p>Standardized 0–100 score to compare products quickly across categories.</p>
-                    </div>
+                    <ul class="features-grid" role="list">
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- leaf icon -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 20c8-8 16-16 16-16s-2.2 6.6-8 12c-5.8 5.4-8 4-8 4z" fill="#2A7D2E" />
+                                    <path d="M4 20s1.6-2.2 6-8c4.4-5.8 8-8 8-8" stroke="#18522B" stroke-width="0" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Eco Score</h3>
+                                <p>See product footprint and CO₂ info at a glance for smarter choices.</p>
+                            </div>
+                        </li>
 
-                    <div class="how-card">
-                        <h4>CO₂ Estimates</h4>
-                        <p>See estimated CO₂ (kg) per product and understand the real-world impact.</p>
-                    </div>
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- lightning -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="#1793E6" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Fast Login</h3>
+                                <p>OTP-powered sign in — quick and secure without losing momentum.</p>
+                            </div>
+                        </li>
 
-                    <div class="how-card">
-                        <h4>Greener Alternatives</h4>
-                        <p>Get recommendations for lower-impact substitutes (materials, packaging, lifecycle).</p>
-                    </div>
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- robot -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="6" width="16" height="12" rx="2" fill="#6C63FF" />
+                                    <circle cx="9" cy="11" r="1.4" fill="#fff" />
+                                    <circle cx="15" cy="11" r="1.4" fill="#fff" />
+                                    <rect x="8" y="14" width="8" height="1.6" rx="0.8" fill="#fff" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Smart Picks</h3>
+                                <p>Personalized suggestions that match your taste and reduce impact.</p>
+                            </div>
+                        </li>
 
-                    <div class="how-card">
-                        <h4>Saved Lists & Tracking</h4>
-                        <p>Create wishlists and track how your choices reduce carbon over time.</p>
-                    </div>
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- chart -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="3" width="3" height="18" rx="1" fill="#F6B042" />
+                                    <rect x="10.5" y="8" width="3" height="13" rx="1" fill="#F6B042" />
+                                    <rect x="17" y="13" width="3" height="8" rx="1" fill="#F6B042" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Transparent Data</h3>
+                                <p>Clear comparison and progress tracking — no surprises, just facts.</p>
+                            </div>
+                        </li>
 
-                    <div class="how-card">
-                        <h4>Verified Data Sources</h4>
-                        <p>We surface LCA and supplier-provided metadata where available for transparency.</p>
-                    </div>
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- shield -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2l7 3v5c0 5-3 9-7 11-4-2-7-6-7-11V5l7-3z" fill="#2A7D2E" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Secure</h3>
+                                <p>Your data and purchases are protected with modern security practices.</p>
+                            </div>
+                        </li>
 
-                    <div class="how-card">
-                        <h4>Privacy-first</h4>
-                        <p>We only store necessary user data. Authentication and storage follow best practices.</p>
-                    </div>
+                        <li class="feature-item">
+                            <div class="feature-icon" aria-hidden="true">
+                                <!-- box -->
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 7l9-4 9 4v8l-9 4L3 15V7z" fill="#00BFA6" />
+                                </svg>
+                            </div>
+                            <div class="feature-text">
+                                <h3>Seamless Checkout</h3>
+                                <p>Fast ordering with clear shipping and eco-friendly options available.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- About -->
-            <section id="about" style="padding-top:20px;">
-                <h2>About</h2>
+            <!-- About (scroll-reveal, alternating image + text) -->
+            <section id="about" class="about-scroll" style="padding-top:20px;">
+                <div class="container">
+                    <h2 class="section-title">About</h2>
 
-                <div class="about-grid">
-                    <div class="about-card">
-                        <h4>Mission</h4>
-                        <p>EcoBasaarX helps shoppers make greener choices by bringing product environmental impact into
-                            the buying experience.</p>
+                    <div class="about-grid">
+                        <!-- Item 1: Mission (image right on desktop) -->
+                        <article class="about-item">
+                            <div class="about-content">
+                                <h3>Mission</h3>
+                                <p>EcoBasaarX helps shoppers make greener choices by bringing product environmental
+                                    impact into the buying experience.</p>
 
-                        <h4 style="margin-top:12px;">How we do it</h4>
-                        <ul style="margin:8px 0 0 18px;color:var(--muted);">
-                            <li>Collect product metadata and LCA information</li>
-                            <li>Compute eco-scores and CO₂ estimates</li>
-                            <li>Suggest better alternatives & packaging improvements</li>
-                        </ul>
-                    </div>
+                                <h4 style="margin-top:12px;">How we do it</h4>
+                                <ul style="margin:8px 0 0 18px;color:var(--muted);">
+                                    <li>Collect product metadata and LCA information</li>
+                                    <li>Compute eco-scores and CO₂ estimates</li>
+                                    <li>Suggest better alternatives & packaging improvements</li>
+                                </ul>
+                            </div>
 
-                    <div class="about-card">
-                        <h4>Team & Tech</h4>
-                        <p class="small-note">Soumya & Nagavalli: backend & APIs • Kushal: MySQL database • Keerthana:
-                            frontend (HTML/CSS/JS)</p>
+                            <figure class="about-media" aria-hidden="true">
+                                <img src="assets/products/aboutpage1.jpg" alt="Illustration: mission" loading="lazy">
+                            </figure>
+                        </article>
 
-                        <h4 style="margin-top:12px;">Demo note</h4>
-                        <p class="small-note">Sign-in/registration demo uses OTP = <strong>1234</strong>. Replace with
-                            real SMS/email in production.</p>
+                        <!-- Item 2: Team & Tech (image left on desktop) -->
+                        <article class="about-item about-item--rev">
+                            <figure class="about-media" aria-hidden="true">
+                                <img src="assets/products/aboutpage2.jpg" alt="Illustration: team and tech"
+                                    loading="lazy">
+                            </figure>
+
+                            <div class="about-content">
+                                <h3>Team & Tech</h3>
+                                <p class="small-note">Soumya &amp; Nagavalli: backend & APIs • Kushal: MySQL database •
+                                    Keerthana: frontend (HTML/CSS/JS)</p>
+
+                                <h4 style="margin-top:12px;">Demo note</h4>
+                                <p class="small-note">Sign-in/registration demo uses OTP = <strong>1234</strong>.
+                                    Replace with real SMS/email in production.</p>
+                            </div>
+                        </article>
+
+                        <!-- Add more about-item blocks as needed -->
                     </div>
                 </div>
             </section>
@@ -401,6 +486,31 @@
             setTimeout(() => contactStatus.textContent = "", 2600);
         });
     </script>
+
+    <script>
+        (function () {
+            const items = document.querySelectorAll('.about-item');
+            if (!items.length) return;
+
+            // stagger effect (optional)
+            items.forEach((it, idx) => it.style.transitionDelay = (idx * 120) + 'ms');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Reveal the item but DO NOT hide earlier revealed ones
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target); // reveal only once
+                    }
+                });
+            }, {
+                threshold: 0.25
+            });
+
+            items.forEach(it => observer.observe(it));
+        })();
+    </script>
+
 </body>
 
 </html>
