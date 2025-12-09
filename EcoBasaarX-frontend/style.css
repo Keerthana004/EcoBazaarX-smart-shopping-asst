@@ -958,3 +958,15 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 }
+/*seller signup page */
+.btn-sell {
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:10px;
+  background: linear-gradient(90deg,#00a8ff,#00d07a);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  margin-left:12px;
+  box-shadow:0 8px 24px rgba(0,160,255,0.12);
+}
